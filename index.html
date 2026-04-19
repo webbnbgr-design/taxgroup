@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxgroup - Λογιστικό Γραφείο Πάτρα | Γεώργιος Αποστολόπουλος</title>
+    <meta name="description" content="Κορυφαίο λογιστικό και φοροτεχνικό γραφείο στην Πάτρα. Λογιστής Α' Τάξης, 5.0 Google Reviews, Αετοί της Λογιστικής.">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            accent: '#2563EB',
+                            gold: '#D97706',
+                        }
+                    },
+                    borderRadius: {
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.05), transparent);
+        }
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-8">
+        <div class="max-w-7xl mx-auto glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-lg shadow-slate-200/50">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-brand-navy rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform duration-300">T</div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg leading-tight tracking-tight uppercase">Taxgroup</span>
+                    <span class="text-[10px] text-slate-500 font-medium uppercase tracking-[0.2em] -mt-0.5">Λογιστικές Λύσεις</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#services" class="hover:text-brand-accent transition-colors">Υπηρεσίες</a>
+                <a href="#about" class="hover:text-brand-accent transition-colors">Το Γραφείο</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors">Επικοινωνία</a>
+            </div>
+
+            <!-- CTA -->
+            <a href="tel:2614007160" class="bg-brand-navy hover:bg-slate-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95 shadow-md shadow-slate-300">
+                <span class="hidden sm:inline">Καλέστε Τώρα</span>
+                <span class="sm:hidden">Κλήση</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 sm:pt-40 sm:pb-32 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <!-- Award Badge -->
+            <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-full px-4 py-1.5 mb-8 animate-fade-in">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-gold"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                <span class="text-xs font-semibold text-amber-800 tracking-wide uppercase">Αετοί της Λογιστικής • 5.0 Google Rating</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-brand-navy mb-8 leading-[1.1] tracking-tight max-w-4xl mx-auto">
+                Αξιόπιστες Λογιστικές <span class="text-brand-accent">Λύσεις</span> στην Πάτρα.
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Γεώργιος Αποστολόπουλος — Λογιστής Α' Τάξης. Με βαθιά εξειδίκευση και αμεσότητα, προσφέρουμε ολοκληρωμένες φοροτεχνικές υπηρεσίες για ιδιώτες και επιχειρήσεις.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:2614007160" class="w-full sm:w-auto bg-brand-accent hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl shadow-blue-200 flex items-center justify-center gap-2 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-12 transition-transform"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.31-2.31a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    2614007160
+                </a>
+                <a href="#services" class="w-full sm:w-auto bg-white border border-slate-200 hover:border-brand-accent text-slate-700 px-8 py-4 rounded-full text-lg font-semibold transition-all flex items-center justify-center">
+                    Δείτε τις Υπηρεσίες
+                </a>
+            </div>
+        </div>
+
+        <!-- Abstract Background Orbs -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent/5 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-0 -left-24 w-72 h-72 bg-brand-gold/5 rounded-full blur-[80px] -z-10"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold text-brand-accent uppercase tracking-[0.3em] mb-4">Εξειδίκευση</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-brand-navy tracking-tight">Ολοκληρωμένες Φοροτεχνικές & Λογιστικές Υπηρεσίες</h3>
+                </div>
+                <p class="text-slate-500 font-medium max-w-sm">Καλύπτουμε κάθε σας ανάγκη με υπευθυνότητα και επαγγελματισμό.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-start gap-6">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 text-brand-navy">Φορολογικές Δηλώσεις</h4>
+                        <p class="text-slate-600 leading-relaxed text-sm">Προετοιμασία και υποβολή δηλώσεων Ε1, Ε2, Ε9 για ιδιώτες, εξασφαλίζοντας τη μέγιστη φορολογική ελάφρυνση.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-start gap-6">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/><polyline points="14 2 14 8 20 8"/><path d="M2 15h10"/><path d="M9 18H2"/><path d="M5 12H2"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 text-brand-navy">Τήρηση Βιβλίων</h4>
+                        <p class="text-slate-600 leading-relaxed text-sm">Πλήρης λογιστική παρακολούθηση επιχειρήσεων όλων των κατηγοριών (Απλογραφικά & Διπλογραφικά).</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-brand-navy p-8 rounded-3xl text-white flex flex-col items-start gap-6">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-blue-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3">Airbnb & Βραχυχρόνια</h4>
+                        <p class="text-slate-300 leading-relaxed text-sm font-light">Εξειδικευμένες συμβουλές και διαχείριση φορολογικών υποχρεώσεων για ιδιοκτήτες ακινήτων Airbnb / Booking.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-start gap-6">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 text-brand-navy">Μισθοδοσία (Εργατικά)</h4>
+                        <p class="text-slate-600 leading-relaxed text-sm">Έκδοση μισθοδοσίας, διαχείριση προσλήψεων/απολύσεων και πλήρη κάλυψη σε θέματα ΕΡΓΑΝΗ.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-start gap-6">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 text-brand-navy">Συμβουλευτική (Fintech)</h4>
+                        <p class="text-slate-600 leading-relaxed text-sm">Φορολογικός σχεδιασμός για νέους κλάδους, κρυπτονομίσματα και ψηφιακές πλατφόρμες.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-start gap-6">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-3 text-brand-navy">Ίδρυση Επιχειρήσεων</h4>
+                        <p class="text-slate-600 leading-relaxed text-sm">Άμεση έναρξη ατομικών επιχειρήσεων και εταιρειών (ΙΚΕ, ΟΕ, ΕΕ) με πλήρη καθοδήγηση.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2 relative">
+                <!-- Decorative element -->
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-accent/10 rounded-full -z-10 animate-pulse"></div>
+                <div class="relative rounded-4xl overflow-hidden shadow-2xl shadow-slate-300">
+                    <img src="https://picsum.photos/seed/taxoffice/800/1000" alt="Professional Office" class="w-full h-auto object-cover aspect-[4/5]" referrerPolicy="no-referrer">
+                    <!-- Overlay Rating -->
+                    <div class="absolute bottom-6 left-6 right-6 glass-nav rounded-2xl p-6 shadow-xl">
+                        <div class="flex items-center gap-1 mb-2">
+                             <!-- 5 Stars -->
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#D97706" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="text-slate-800 font-bold italic leading-snug">"Άμεση εξυπηρέτηση και κατάρτιση σε κάθε φορολογικό θέμα. Ο κ. Αποστολόπουλος είναι πάντα δίπλα μας."</p>
+                        <p class="text-slate-500 text-xs mt-2">— Google Review 5.0/5.0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2">
+                <h2 class="text-sm font-bold text-brand-accent uppercase tracking-[0.3em] mb-4">Το Γραφείο</h2>
+                <h3 class="text-4xl font-bold text-brand-navy tracking-tight mb-8">Επαγγελματισμός & Αμεσότητα σε κάθε Πρόκληση.</h3>
+                
+                <div class="space-y-6 text-slate-600 leading-relaxed text-lg font-light">
+                    <p>
+                        Στο γραφείο μας στην Πάτρα, ο <span class="font-semibold text-brand-navy">Γεώργιος Αποστολόπουλος</span> και η ομάδα του εργάζονται καθημερινά για να προσφέρουν λύσεις που εξασφαλίζουν την ηρεμία και την ανάπτυξη των πελατών μας.
+                    </p>
+                    <p>
+                        Με πιστοποίηση <span class="font-semibold text-brand-navy">Λογιστή Α' Τάξης</span> και την αναγνώριση ως έναν από τους <span class="font-semibold text-amber-700 underline decoration-amber-200 underline-offset-4">«Αετούς της Λογιστικής»</span>, εγγυόμαστε ποιότητα υπηρεσιών που σπανίζει.
+                    </p>
+                    <p>
+                        Η φήμη μας βασίζεται στην ικανότητά μας να επιλύουμε άμεσα σύνθετα προβλήματα και να χτίζουμε σχέσεις εμπιστοσύνης που διαρκούν στον χρόνο.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-2 gap-8">
+                    <div>
+                        <div class="text-4xl font-bold text-brand-accent mb-1">5/5</div>
+                        <div class="text-slate-500 text-sm font-medium">Google Reviews</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-brand-accent mb-1">100%</div>
+                        <div class="text-slate-500 text-sm font-medium">Ακρίβεια & Αποτελεσματικότητα</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-24 px-6 bg-brand-navy text-white rounded-[3rem_3rem_0_0] sm:rounded-[5rem_5rem_0_0]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-blue-400 uppercase tracking-[0.3em] mb-4">Επικοινωνία</h2>
+                <h3 class="text-3xl sm:text-5xl font-bold tracking-tight mb-6">Είμαστε στην διάθεσή σας</h3>
+                <p class="text-slate-400 max-w-xl mx-auto">Επισκεφθείτε μας στο κέντρο της Πάτρας ή καλέστε μας για να συζητήσουμε τις ανάγκες σας.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                <!-- Info -->
+                <div class="flex flex-col justify-between gap-8 h-full">
+                    <div class="space-y-8">
+                        <!-- Location -->
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Διεύθυνση</h4>
+                                <p class="text-slate-400">Πατρέως 84, Πάτρα, Τ.Κ. 262 21</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone 1 -->
+                        <a href="tel:2614007160" class="flex gap-6 items-start group hover:bg-white/5 p-4 rounded-2xl transition-colors -ml-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.31-2.31a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Σταθερό</h4>
+                                <p class="text-slate-400 group-hover:text-white transition-colors">2614 007160</p>
+                            </div>
+                        </a>
+
+                        <!-- Phone 2 -->
+                        <a href="tel:6906215755" class="flex gap-6 items-start group hover:bg-white/5 p-4 rounded-2xl transition-colors -ml-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Κινητό</h4>
+                                <p class="text-slate-400 group-hover:text-white transition-colors">6906 215755</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="h-[400px] lg:h-auto rounded-4xl overflow-hidden shadow-2xl relative">
+                    <!-- Standard iframe with exact address -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.657969766935!2d21.7345371!3d38.2435422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135e3969a5ea2d57%3A0xa6748464a93883a!2sPatreos%2084%2C%20Patras%20262%2021%2C%20Greece!5e0!3m2!1sen!2sus!4v1713554400000!5m2!1sen!2sus" 
+                        class="w-full h-full grayscale border-0 opacity-80" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <!-- Overlay to fix the grayscale on hover -->
+                    <div class="absolute inset-0 pointer-events-none border border-white/10 rounded-4xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy border-t border-white/10 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-white font-bold text-sm">T</div>
+                    <span class="font-bold text-lg text-white tracking-tight uppercase">Taxgroup</span>
+                </div>
+                <p class="text-slate-500 text-sm">Λογιστικό Γραφείο Γεώργιος Αποστολόπουλος</p>
+            </div>
+
+            <div class="flex gap-8 text-slate-500 text-sm">
+                <span>© 2026 taxgroup.gr</span>
+                <span>Πάτρα</span>
+            </div>
+
+            <div class="flex flex-row items-center gap-4">
+                <p class="text-slate-500 text-xs hidden sm:block">Ακολουθήστε μας:</p>
+                <div class="flex gap-3">
+                    <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- No-JS Fallback -->
+    <noscript>
+        <div class="fixed inset-0 bg-white z-[9999] flex items-center justify-center p-8 text-center">
+            <p class="text-xl font-bold">Παρακαλούμε ενεργοποιήστε τη JavaScript για να δείτε τον ιστότοπο.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>
